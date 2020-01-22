@@ -8,7 +8,8 @@ def merge(arrA, arrB):
     while lft < len(arrA) and rt < len(arrB):
         # if the right index value greater than the left index value
         # push left side to the merged array
-        # increment the left index else
+        # increment the left index
+        # else
         # push the right index value
         # increment the right index
         if arrA[lft] < arrB[rt]:
@@ -23,8 +24,8 @@ def merge(arrA, arrB):
         merged_arr.append(arrA[lft])
         lft += 1
     while rt < len(arrB):
-            # push right index value to the merged arr
-            # increment the index
+          # push right index value to the merged arr
+          # increment the index
         merged_arr.append(arrB[rt])
         rt += 1
     return merged_arr
@@ -45,8 +46,6 @@ def merge_sort(arr):
     # create a left and right side
     left_side = merge_sort(arr[:index_split])
     right_side = merge_sort(arr[index_split:])
-    print("LEFT SIDE: ", left_side)
-    print("RIGHT SIDE: ", right_side)
     return(merge(left_side, right_side))
 
 
